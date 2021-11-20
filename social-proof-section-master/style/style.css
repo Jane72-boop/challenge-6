@@ -1,0 +1,222 @@
+html { font-size: 62.5%; } 
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Spartan", Arial, Helvetica, sans-serif;
+    width: auto;
+    background-color: #fff;
+}
+
+.comp {
+    display: flex;
+    flex-direction: column;
+    max-width: 35em;
+    width: 100%;
+    height: auto;
+    margin: 10em auto;
+    background-color: #fff;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.entice {
+    max-width: 30em;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3em;
+}
+
+.entice h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: #502050;
+    text-align: center;
+    margin-bottom: .5em;
+}
+
+.entice p {
+    font-size: 1.5em;
+    font-weight: 400;
+    color:#937b92;
+    text-align: center;
+}
+
+.ratings {
+    max-width: 30em;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3em;
+}
+
+.rate1, .rate2, .rate3 {
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    margin: 2em auto;
+}
+
+.starImg {
+    width: 100px;
+    height: 20px;
+    background-repeat: space;
+    background-image: url("/images/icon-star.svg");
+    margin: 0 auto;
+}
+
+.reviews {
+    max-width: 30em;
+    width: 100%;
+    height: auto;
+    color: #fff;
+}
+
+.review1, .review2, .review3 {
+    background-color: #502050;
+    border-radius: 5px;
+    padding: 3em;
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    'pfp name'
+    'text text';
+    margin-bottom: 2em;
+}
+
+.pfp {
+    grid-area: pfp;
+    border-radius: 50%;
+    max-width: 5em;
+    width: 100%;
+    margin: auto 0;
+}
+
+.name {
+    grid-area: name;
+    max-width: 15em;
+    width: 100%;
+    font-size: 1em;
+    margin: auto 0;
+}
+
+.buyer {
+    color: #ee68a4;
+}
+
+.userText {
+    grid-area: text;
+    font-size: 1.3em;
+    margin-top: .5em;
+}
+
+@media only screen and (min-width:900px) { 
+
+    .comp {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "entice ratings"
+        "reviews reviews";
+        max-width: 90em;
+        width: 100%;
+        height: 60em;
+        margin: 7em auto;
+        background-color: #fff;
+        border-radius: 10px;
+        align-items: center;
+        padding: 3em;
+    }
+
+    .entice {
+        grid-area: entice;
+        align-self: flex-start;
+        max-width: 50em;
+        width: 100%;
+        height: auto;
+        margin-bottom: 0em;
+    }
+    
+    .entice h1 {
+        font-size: 3em;
+        font-weight: 700;
+        color: #502050;
+        text-align: left;
+        margin-bottom: .5em;
+    }
+    
+    .entice p {
+        font-size: 1.5em;
+        font-weight: 400;
+        color:#937b92;
+        text-align: left;
+    }
+
+    
+    .ratings {
+        align-self: flex-start;
+        grid-area: ratings;
+        max-width: 50em;
+        width: 100%;
+        height: auto;
+        margin-left: 5em;
+        margin-bottom: 0;
+    }
+    
+    .rate1, .rate2, .rate3 {
+        display: flex;
+        align-content: flex-start;
+        justify-content: flex-start;
+        text-align: left;
+        margin: 2em 0;
+    }
+
+    .rate2 {
+        margin-left: 1.5em;
+    }
+
+    .rate3 {
+        margin-left: 3em;
+    }
+
+    .starImg {
+        width: 100px;
+        height: 20px;
+        background-repeat: space;
+        background-image: url("/images/icon-star.svg");
+        margin: 0 1em;
+    }
+
+    .reviews {
+        max-width: 80em;
+        width: 100%;
+        height: 30em;
+        grid-area: reviews;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+
+    .review1, .review2, .review3 {
+        max-width: 25em;
+        width: 100%;
+        height: 85%;
+        padding: 3em;
+    }
+
+    .review2 {
+        margin-top: 1em;
+    }
+
+    .review3 {
+        margin-top: 2em;
+    }
+}
